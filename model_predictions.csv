@@ -1,0 +1,4 @@
+Model,Predicted Class,Normal/Mild,Moderate,Severe
+Sagittal T1,Severe,0.185752,0.29037344,0.5238746
+Axial T2,Normal/Mild,1.0,0.0,0.0
+Sagittal T2/STIR,Normal/Mild,1.0,0.0,0.0
