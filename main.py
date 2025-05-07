@@ -9,6 +9,9 @@ import torchvision.models as torchvision_models  # import torchvision.models as 
 import pydicom
 import numpy as np
 
+from torchvision.models import EfficientNet_V2_S_Weights #edited
+
+
 # Device setup
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -21,7 +24,9 @@ reverse_label_map = {v: k for k, v in label_map.items()}
 class CustomEfficientNetV2(nn.Module):
     def __init__(self, num_classes=3, pretrained_weights=True):
         super(CustomEfficientNetV2, self).__init__()
-        self.model = models.efficientnet_v2_s(weights=True)
+        # self.model = models.efficientnet_v2_s(weights=True)
+        self.model = models.efficientnet_v2_s(weights=EfficientNet_V2_S_Weights.DEFAULT)#edited
+        
         if pretrained_weights:
             self.model.load_state_dict(torch.load(pretrained_weights))
         num_ftrs = self.model.classifier[-1].in_features
