@@ -27,8 +27,8 @@ class CustomEfficientNetV2(nn.Module):
 
 def load_all_models():
     model_paths = {
-        "Sagittal T1": "sagittal_t1/best_model_epoch_1.pth",
-        "Axial T2": "axial_t2/best_model_epoch_1.pth",
+        "Sagittal T1": "sagittal_t1/best_model_epoch_2.pth",
+        "Axial T2": "axial_t2/best_model_epoch_3.pth",
         "Sagittal T2/STIR": "saggittal_t2/best_model_epoch_1.pth",
     }
 
